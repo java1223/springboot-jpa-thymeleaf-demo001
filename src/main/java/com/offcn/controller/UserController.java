@@ -24,6 +24,10 @@ public class UserController {
     public String findAll(Model model){
 
         List<User> all=userService.findAll();
+        //校长循环的代码
+        for (int i = 0; i <10 ; i++) {
+            System.out.println("小张循环的代码");
+        }
         //封装全部用户数据到数据类型
         model.addAttribute("page",all);
         //跳转到显示全部用户数据的模板
